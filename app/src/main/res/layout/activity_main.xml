@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/activity_motion_scene"
+        app:showPaths="true">
+
+        <View
+            android:id="@+id/vStartStatus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    <View
+        android:id="@+id/vProperty"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/colorAccent"
+        android:onClick="displayPropertyAnim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivShare"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@mipmap/ic_launcher"
+        android:onClick="displayShareElement"
+        android:transitionName="activityTransform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivTransition"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@mipmap/ic_launcher"
+        android:onClick="displayTransitionAnim"
+        android:transitionName="activityTransform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mTvHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:text="RecyclerView"
+        android:onClick="displayMultiClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/mTvCategory" />
+
+    <TextView
+        android:id="@+id/mTvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:text="Category"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toRightOf="@id/mTvHome"
+        app:layout_constraintRight_toLeftOf="@id/mTvCommunity" />
+
+    <TextView
+        android:id="@+id/mTvCommunity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:text="Community"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toRightOf="@id/mTvCategory"
+        app:layout_constraintRight_toLeftOf="@id/mTvMine" />
+
+    <TextView
+        android:id="@+id/mTvMine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:text="Mine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toRightOf="@id/mTvCommunity"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
