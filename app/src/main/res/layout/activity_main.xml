@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
+    <TextView
+        android:id="@+id/mTvCurrentTrueTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:text="当前时间:" />
+
     <androidx.constraintlayout.motion.widget.MotionLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -59,9 +70,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:background="@color/colorPrimary"
+        android:onClick="displayMultiClick"
         android:padding="10dp"
         android:text="RecyclerView"
-        android:onClick="displayMultiClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintLeft_toLeftOf="parent"

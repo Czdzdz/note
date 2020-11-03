@@ -7,3 +7,7 @@
 /captures
 .externalNativeBuild
 .cxx
+test
+app/mapping.txt
+app/seeds.txt
+app/unused.txt
